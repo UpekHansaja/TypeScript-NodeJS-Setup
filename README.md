@@ -116,7 +116,7 @@ npm i ts-node -D
 In here `-D` at the end of the code line is refers to as install only as a dependancy for the current production (project).
 
 So if your using this 2nd Method,
-no need to compile `TypeScript`, since this `ts-node` dependency helps us to directly run `TypeScript` with `nodejs` instead of converting into `JavaScript`.
+no need to compile `TypeScript`, since this [ts-node dependency](https://www.npmjs.com/package/ts-node) helps us to directly run `TypeScript` with `nodejs` instead of converting into `JavaScript`.
 
 Next open `package.json` file and,
 
