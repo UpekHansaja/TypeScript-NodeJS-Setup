@@ -11,18 +11,18 @@ npm init -y
 
 Then we should create our very first TypeScript File as `index.ts` at the project root.
 
-Then after that we should change `"main": "index.js",` to `"main": "index.ts",` at the `package.json` file.
+Then after that, we should change `"main": "index.js",` to `"main": "index.ts",` in the `package.json` file.
 </br>
 
 ### Initialising TypeScript
 
-To initialise TypeScript try,
+To initialize TypeScript try,
 
 ```sh
 npx tsc --init
 ```
 
-But if you haven't install `TypeScript` before then you may encounter an error.
+But if you haven't installed `TypeScript` before then you may encounter an error.
 
 To install TypeScript,
 
@@ -47,7 +47,7 @@ const addNumbers = (a: number, b: number) => {
 console.log(addNumbers(2, 3));
 ```
 
-NodeJS haven't the ability to execute TypeScript by default,
+NodeJS doesn't have the ability to execute TypeScript by default,
 
 So there are 2 main ways to overcome this situation
 
@@ -56,7 +56,7 @@ So there are 2 main ways to overcome this situation
 
 ***
 
-*Before move on, let's create a new folder called `server` and move `index.ts` file into it.*
+*Before moving on, let's create a new folder called `server` and move the `index.ts` file into it.*
 
 
 ### $Method - 01:$
@@ -64,7 +64,7 @@ So there are 2 main ways to overcome this situation
 #### Compile TypeScript to JavaScript
 
 As for the Method 01,
-First you should create a new folder called `dist` which stands for distributable at the project root.
+First, you should create a new folder called `dist` which stands for distributable at the project root.
 
 Then open `tsconfig.json` and change `"outDir": "./",` to `"outDir": "./dist",` And also make sure to uncomment it.
 
@@ -74,11 +74,11 @@ After that, simply open a new terminal and
 tsc
 ```
 
-after the line executed, now you will able to see an `index.js` file has been created inside `dist` folder & it includes a `JavaScript` code which obtained by compiling from `TypeScript` at `index.ts` file.
+after the line is executed, now you will be able to see an `index.js` file has been created inside the `dist` folder & it includes a `JavaScript` code obtained by compiling from `TypeScript` at the `index.ts` file.
 
-Well, sometimes it may be a horrible feeling when your wanted to run the project but each and every time you have to compile it at the terminal by `tsc` and run.
+Well, sometimes it may be a horrible feeling when you want to run the project each & every time you have to compile it at the terminal by `tsc` and run.
 
-We can manage that situation by simply updating `package.json` file
+We can manage that situation by simply updating the `package.json` file
 
 ```json
 "scripts": {
@@ -87,9 +87,9 @@ We can manage that situation by simply updating `package.json` file
 ```
 
 By using the above `"tsc && node dist/index.js"`,
-`tsc` helps to complie the `index.ts` and (`&&`) wait for complie then, execute `node dist/index.js`
+`tsc` helps to compile the `index.ts` and (`&&`) wait for compile then, execute `node dist/index.js`
 
-Perfect, Now all we have to do run and test our TypeScript project completely setup with NodeJS
+Perfect, Now all we have to do is, run and test our TypeScript project setup completely with NodeJS.
 
 ```sh
 npm run start
@@ -106,19 +106,19 @@ npm run start
 By this Method 02,
 We are able to Directly run TypeScript on NodeJS with the help of a dependency.
 
-For this Method we have to go though a simple `npm` installation.
+For this Method, we have to go through a simple `npm` installation.
 
 In terminal,
 ```sh
 npm i ts-node -D
 ```
 
-In here `-D` at the end of the code line is refers to as install only as a dependancy for the current production (project).
+Here `-D` at the end of the code line is referred to as install only as a development dependency for the current production (project).
 
-So if your using this 2nd Method,
+So if you're using this 2nd Method,
 no need to compile `TypeScript`, since this [ts-node dependency](https://www.npmjs.com/package/ts-node) helps us to directly run `TypeScript` with `nodejs` instead of converting into `JavaScript`.
 
-Next open `package.json` file and,
+Next, open the `package.json` file and,
 
 ```json
 "scripts": {
@@ -127,7 +127,7 @@ Next open `package.json` file and,
 ```
 
 😄 That's it, 
-With this 2nd Method we can get rid from creating `dist` for compiling pourpose and also it helps us to speed up the project development phase by saving the time taken for compile to `js`.
+With this 2nd Method, we can get rid of creating `dist` directory for compiling purposes and also it helps us to speed up the project development phase by saving the time taken to compile `ts` as `js`.
 
 Now Let's run the project
 
@@ -144,5 +144,5 @@ npm run start
 ***
 
 ##### Personal thought : 
-Personally I prefer to proceed with the second method but it may vary depent on the situation which how we should apply based on the project scope or the tech-stack prefered to use for the project. 
+I prefer to proceed with the second method but it may vary depending on the situation and how we should apply based on the project scope or the tech stack preferred to use for the project. 
 Thanks & Regards...
